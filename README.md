@@ -18,15 +18,21 @@ $ cd go-project-template
 
 2. Run the script to create a new project:
 
-```$ ./create-project.sh my-go-project```
+```
+$ ./create-project.sh my-go-project
+```
 
 3. Navigate to your project directory:
 
-```$ cd my-go-project```
+```
+$ cd my-go-project
+```
 
 4. Initialize Go modules and start coding:
 
-```$ go mod tidy```
+```
+$ go mod tidy
+```
 
 ## Structure
 
