@@ -6,6 +6,7 @@ This repository provides a simple way to generate a clean Go project structure a
 
 - Creates the recommended directory structure for Go projects.
 - Adds common files like `go.mod`, `.gitignore`, and `Makefile`.
+- Use the project name and username provided to build templates files.
 
 ## Usage
 
@@ -59,7 +60,11 @@ my-go-project/
 │   └── build.sh          # Automation script to build the project
 ├── test/
 │   └── integration_test.go # Basic integration test
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
 ├── go.mod
+├── LICENSE
 ├── Makefile
 └── README.md
 ```

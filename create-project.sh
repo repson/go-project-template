@@ -52,8 +52,11 @@ echo "module $MODULE_NAME
 go $GO_VERSION" > "$PROJECT_NAME/go.mod"
 
 # Process templates and replace placeholders
-process_template "$TEMPLATE_DIR/README.md" "$PROJECT_NAME/README.md"
 process_template "$TEMPLATE_DIR/.gitignore" "$PROJECT_NAME/.gitignore"
+process_template "$TEMPLATE_DIR/docker-compose.yml" "$PROJECT_NAME/docker-compose.yml"
+process_template "$TEMPLATE_DIR/Dockerfile" "$PROJECT_NAME/Dockerfile"
+process_template "$TEMPLATE_DIR/LICENSE" "$PROJECT_NAME/LICENSE"
+process_template "$TEMPLATE_DIR/README.md" "$PROJECT_NAME/README.md"
 process_template "$TEMPLATE_DIR/Makefile" "$PROJECT_NAME/Makefile"
 process_template "$TEMPLATE_DIR/configs/config.yaml" "$PROJECT_NAME/configs/config.yaml"
 process_template "$TEMPLATE_DIR/cmd/server/main.go" "$PROJECT_NAME/cmd/server/main.go"
