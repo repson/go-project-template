@@ -12,10 +12,20 @@ fi
 PROJECT_NAME=$1
 USERNAME=${2:-"username"} # Default to "username" if not provided
 TEMPLATE_DIR="templates"
+
+# Extract Go version dynamically
+GO_VERSION=$(go version | grep -oE 'go[0-9]+\.[0-9]+(\.[0-9]+)?' | sed 's/go//')
+
+if [ -z "$GO_VERSION" ]; then
+    echo "Could not detect Go version. Ensure Go is installed and in your PATH."
+    exit 1
+fi
+
 MODULE_NAME="github.com/$USERNAME/$PROJECT_NAME"
 
 echo "Creating Go project: $PROJECT_NAME..."
 echo "Using module name: $MODULE_NAME"
+echo "Detected Go version: $GO_VERSION"
 
 # Function to process template files and replace placeholders
 process_template() {
@@ -26,6 +36,7 @@ process_template() {
     # Replace placeholders {{module-name}} and {{project-name}}
     sed -e "s|{{module-name}}|$MODULE_NAME|g" \
         -e "s|{{project-name}}|$PROJECT_NAME|g" \
+        -e "s|{{go-version}}|$GO_VERSION|g" \
         "$src" > "$dest"
 
     echo "Created $dest"
@@ -38,7 +49,7 @@ mkdir -p $PROJECT_NAME/{cmd/server,configs,internal/{server,handlers},pkg/utils,
 mkdir -p "$PROJECT_NAME"
 echo "module $MODULE_NAME
 
-go 1.21" > "$PROJECT_NAME/go.mod"
+go $GO_VERSION" > "$PROJECT_NAME/go.mod"
 
 # Process templates and replace placeholders
 process_template "$TEMPLATE_DIR/README.md" "$PROJECT_NAME/README.md"
