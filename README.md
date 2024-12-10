@@ -10,9 +10,11 @@ This repository provides a simple way to generate a clean Go project structure a
 ## Usage
 
 1. Clone this repository:
-   ```$ bash
-   git clone https://github.com/yourusername/go-project-template.git
-   $ cd go-project-template
+
+```
+$ bash git clone https://github.com/yourusername/go-project-template.git
+$ cd go-project-template
+```
 
 2. Run the script to create a new project:
 
