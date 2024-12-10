@@ -7,6 +7,7 @@ This repository provides a simple way to generate a clean Go project structure a
 - Creates the recommended directory structure for Go projects.
 - Adds common files like `go.mod`, `.gitignore`, and `Makefile`.
 - Use the project name and username provided to build templates files.
+- The LICENSE file is dynamically generated.
 
 ## Usage
 
@@ -20,10 +21,16 @@ $ cd go-project-template
 2. Run the script to create a new project:
 
 ```
-$ ./create-project.sh <my-go-project> [username]
+$ ./create-project.sh <my-go-project> [username] [license]
 ```
 
-If the second parameter is not provided, the "username" string will be used by default.
+If the second and third parameters are not provided, the following strings will be used by default:
+
+* username:
+    * Default value: username
+* license:
+    * Options available: Apache-2.0, GPL-3.0 or MIT.
+    * Default value: MIT
 
 3. Navigate to your project directory:
 
