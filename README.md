@@ -19,8 +19,10 @@ $ cd go-project-template
 2. Run the script to create a new project:
 
 ```
-$ ./create-project.sh my-go-project
+$ ./create-project.sh <my-go-project> [username]
 ```
+
+If the second parameter is not provided, the "username" string will be used by default.
 
 3. Navigate to your project directory:
 
@@ -74,7 +76,7 @@ Run the build script or use the Makefile.
 
 Start the application.
 
-```$ ./bin/app```
+```$ make run```
 
 3. Testing:
 

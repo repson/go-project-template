@@ -7,5 +7,5 @@ import (
 
 // HomeHandler handles the root route.
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Welcome to My Go Project!")
+	fmt.Fprintf(w, "Welcome to {{project-name}}!")
 }

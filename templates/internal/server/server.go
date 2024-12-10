@@ -1,8 +1,8 @@
 package server
 
 import (
-	"my-go-project/internal/handlers"
 	"net/http"
+	"{{module-name}}/internal/handlers"
 )
 
 // NewServer creates a new HTTP server with configured routes.

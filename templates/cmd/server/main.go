@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"my-go-project/internal/server"
 	"net/http"
+	"{{module-name}}/internal/server"
 )
 
 func main() {

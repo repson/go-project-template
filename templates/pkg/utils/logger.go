@@ -1,8 +1,6 @@
 package utils
 
-import (
-	"log"
-)
+import "log"
 
 // LogInfo logs informational messages.
 func LogInfo(message string) {
