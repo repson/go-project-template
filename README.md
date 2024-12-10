@@ -60,19 +60,19 @@ my-go-project/
 
 1. Build the project:
 
-Run the build script or use the Makefile:
+Run the build script or use the Makefile.
 
 ```$ make build```
 
 2. Run the server:
 
-Start the application:
+Start the application.
 
 ```$ ./bin/app```
 
 3. Testing:
 
-Execute the tests to ensure everything works as espected:
+Execute the tests to ensure everything works as espected.
 
 ```$ make test```
 
