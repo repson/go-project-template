@@ -34,30 +34,6 @@ $ cd my-go-project
 $ go mod tidy
 ```
 
-## How It Works
-
-1. Build the project:
-
-Run the build script or use the Makefile.
-
-```$ make build```
-
-2. Run the server:
-
-Start the application.
-
-```$ ./bin/app```
-
-3. Testing:
-
-Execute the tests to ensure everything works as espected.
-
-```$ make test```
-
-4. Configurations:
-
-Update the config/config.yml file to modify parameters like the server port or database settings.
-
 ## Structure
 
 The generated project will have the following structure:
@@ -85,3 +61,27 @@ my-go-project/
 ├── Makefile
 └── README.md
 ```
+
+## How It Works
+
+1. Build the project:
+
+Run the build script or use the Makefile.
+
+```$ make build```
+
+2. Run the server:
+
+Start the application.
+
+```$ ./bin/app```
+
+3. Testing:
+
+Execute the tests to ensure everything works as espected.
+
+```$ make test```
+
+4. Configurations:
+
+Update the config/config.yml file to modify parameters like the server port or database settings.
