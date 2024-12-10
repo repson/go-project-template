@@ -62,6 +62,7 @@ my-go-project/
 └── README.md
 ```
 
+
 ## How It Works
 
 1. Build the project:
